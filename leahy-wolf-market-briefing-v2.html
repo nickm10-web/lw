@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>April 2026 Market Briefing · Leahy-Wolf Company</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:        #0b0d0a;
+    --black-soft:   #141713;
+    --forest:       #1e5237;
+    --forest-deep:  #0f2e1e;
+    --forest-soft:  #2d6e4c;
+    --cream:        #f3efe3;
+    --cream-soft:   #ece6d6;
+    --sage:         #e3ece5;
+    --ink:          #16180f;
+    --ink-soft:     #3a3a35;
+    --rule:         #d7d3c8;
+    --muted:        #6a6a63;
+  }
+
+  html, body { background: var(--cream); }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .paper {
+    max-width: 1080px;
+    margin: 0 auto;
+    background:
+      radial-gradient(1200px 700px at 10% 0%, rgba(30,82,55,0.04), transparent 60%),
+      radial-gradient(900px 500px at 90% 30%, rgba(11,13,10,0.03), transparent 60%),
+      var(--cream);
+    box-shadow: 0 2px 40px rgba(0,0,0,0.08);
+  }
+
+  /* ═════════ MASTHEAD ═════════ */
+  .masthead {
+    background: var(--black);
+    padding: 20px 56px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .masthead-logo img {
+    height: 30px;
+    width: auto;
+    display: block;
+  }
+  .masthead-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.7;
+  }
+  .masthead-meta strong {
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  /* ═════════ HERO ═════════ */
+  .hero {
+    position: relative;
+    background: var(--black);
+    color: #fff;
+    padding: 90px 56px 110px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(900px 600px at 85% 110%, rgba(30,82,55,0.55), transparent 55%),
+      radial-gradient(700px 400px at 15% -10%, rgba(45,110,76,0.28), transparent 60%);
+    z-index: -1;
+  }
+  .hero::after {
+    content: "ISSUE 04 / APRIL 2026";
+    position: absolute;
+    right: 56px;
+    bottom: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.28);
+  }
+  .hero-kicker {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    color: var(--forest-soft);
+    text-transform: uppercase;
+    padding: 6px 10px 5px;
+    border: 1px solid rgba(45,110,76,0.55);
+    border-radius: 2px;
+    margin-bottom: 38px;
+  }
+  .hero-title {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "SOFT" 50, "opsz" 144, "wght" 450;
+    font-size: clamp(46px, 7.4vw, 94px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 26px;
+    max-width: 13ch;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--forest-soft);
+    font-variation-settings: "SOFT" 100, "opsz" 144, "wght" 400;
+  }
+  .hero-deck {
+    font-size: 17px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.78);
+    max-width: 560px;
+    font-weight: 300;
+  }
+  .hero-byline {
+    margin-top: 46px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.42);
+    text-transform: uppercase;
+  }
+  .hero-byline span { color: rgba(255,255,255,0.82); }
+
+  /* ═════════ LEDE ═════════ */
+  .lede {
+    padding: 72px 56px 40px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .dropcap {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .dropcap::first-letter {
+    font-size: 92px;
+    line-height: 0.82;
+    float: left;
+    padding: 6px 12px 0 0;
+    color: var(--forest);
+    font-weight: 700;
+    font-variation-settings: "opsz" 144, "wght" 800;
+  }
+  .lede-aside {
+    padding-top: 12px;
+    border-top: 2px solid var(--ink);
+  }
+  .lede-aside-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .lede-aside-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--ink);
+    font-variation-settings: "SOFT" 100, "opsz" 144, "wght" 400;
+  }
+  .lede-aside-text .mark {
+    background: linear-gradient(transparent 62%, rgba(45,110,76,0.28) 62%);
+    padding: 0 2px;
+  }
+
+  /* ═════════ STAT WALL ═════════ */
+  .statwall {
+    padding: 60px 56px 56px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--cream-soft);
+  }
+  .statwall-intro {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 28px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 44px;
+    align-items: end;
+  }
+  .stat {
+    position: relative;
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(62px, 9vw, 116px);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "wght" 700, "SOFT" 0;
+    margin-bottom: 14px;
+  }
+  .stat-num .unit {
+    font-size: 0.42em;
+    vertical-align: 0.7em;
+    color: var(--forest);
+    font-weight: 500;
+    margin-left: 4px;
+    letter-spacing: 0;
+  }
+  .stat-num .plus {
+    color: var(--forest);
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+    border-top: 2px solid var(--ink);
+    padding-top: 10px;
+  }
+  .stat-body {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 30ch;
+  }
+
+  /* ═════════ CHAPTER ═════════ */
+  .chapter {
+    padding: 80px 56px 20px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+  .chapter-num {
+    font-family: 'Fraunces', serif;
+    font-size: 140px;
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    color: var(--forest);
+    font-variation-settings: "opsz" 144, "wght" 300, "SOFT" 30;
+    font-style: italic;
+    position: sticky;
+    top: 40px;
+  }
+  .chapter-head {
+    font-family: 'Fraunces', serif;
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 20;
+    margin-bottom: 6px;
+    max-width: 18ch;
+  }
+  .chapter-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 14px;
+  }
+  .chapter-body {
+    font-size: 16px;
+    line-height: 1.68;
+    color: var(--ink-soft);
+    max-width: 58ch;
+  }
+  .chapter-body p { margin-bottom: 1em; }
+  .chapter-body p:last-child { margin-bottom: 0; }
+  .chapter-body strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .chapter-body em.green {
+    font-style: italic;
+    color: var(--forest);
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+  }
+
+  /* ═════════ SIDEBAR EXPLAINER ═════════ */
+  .sidebar {
+    margin: 48px 56px 10px;
+    padding: 26px 32px 28px;
+    background: var(--sage);
+    border-left: 4px solid var(--forest);
+    border-radius: 1px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 34px;
+    align-items: start;
+  }
+  .sidebar-kicker {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--forest-deep);
+    line-height: 1.2;
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 80;
+  }
+  .sidebar-body {
+    font-size: 14.5px;
+    line-height: 1.62;
+    color: var(--ink-soft);
+  }
+  .sidebar-body strong {
+    color: var(--forest-deep);
+    font-weight: 600;
+  }
+
+  /* ═════════ FULL-BLEED QUOTE ═════════ */
+  .bleedquote {
+    background: var(--black);
+    color: #fff;
+    padding: 90px 56px 94px;
+    margin: 64px 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .bleedquote::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(800px 500px at 85% 50%, rgba(30,82,55,0.4), transparent 60%);
+  }
+  .bleedquote-inner {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .bleedquote-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 120px;
+    line-height: 0.3;
+    color: var(--forest-soft);
+    font-variation-settings: "opsz" 144, "wght" 700;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .bleedquote-text {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 3.8vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #fff;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 40;
+    font-style: italic;
+  }
+  .bleedquote-text .hi {
+    color: var(--forest-soft);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .bleedquote-cite {
+    margin-top: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ═════════ TIMELINE ═════════ */
+  .timeline-wrap {
+    padding: 80px 56px 20px;
+  }
+  .timeline-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 18px;
+  }
+  .timeline-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    line-height: 1.1;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "wght" 500;
+  }
+  .timeline-legend {
+    display: flex;
+    gap: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .timeline-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .timeline-legend .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .timeline-legend .dot.c { background: var(--black); }
+  .timeline-legend .dot.i { background: var(--forest); }
+
+  .tl {
+    display: grid;
+    grid-template-columns: 110px 20px 1fr;
+    column-gap: 20px;
+    row-gap: 0;
+  }
+  .tl > div {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .tl > div:nth-last-child(-n+3) { border-bottom: none; padding-bottom: 0; }
+
+  .tl .date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    padding-top: 16px;
+  }
+  .tl .marker {
+    position: relative;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .tl .marker::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--black);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 1px var(--ink);
+  }
+  .tl .marker.industry::before {
+    background: var(--forest);
+    box-shadow: 0 0 0 1px var(--forest);
+  }
+  .tl .event {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding-top: 14px;
+    padding-bottom: 16px;
+  }
+  .tl .event strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .tl .event.industry strong { color: var(--forest-deep); }
+
+  /* ═════════ FORCES GRID ═════════ */
+  .forces {
+    padding: 80px 56px 20px;
+  }
+  .forces-head {
+    margin-bottom: 36px;
+  }
+  .forces-head .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 10px;
+  }
+  .forces-head h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.02;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 20;
+    max-width: 16ch;
+  }
+  .forces-head h2 em {
+    font-style: italic;
+    color: var(--forest);
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 80;
+  }
+  .forces-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .force {
+    background: var(--cream);
+    padding: 38px 34px 34px;
+    position: relative;
+    overflow: hidden;
+  }
+  .force-num {
+    position: absolute;
+    right: 22px;
+    top: 12px;
+    font-family: 'Fraunces', serif;
+    font-size: 120px;
+    line-height: 0.8;
+    color: rgba(30,82,55,0.08);
+    font-variation-settings: "opsz" 144, "wght" 700;
+    pointer-events: none;
+    letter-spacing: -0.04em;
+  }
+  .force-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .force-title {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 20;
+    margin-bottom: 12px;
+    position: relative;
+    max-width: 18ch;
+  }
+  .force-body {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    position: relative;
+    max-width: 36ch;
+  }
+  .force-body strong { color: var(--ink); font-weight: 600; }
+
+  /* ═════════ LETTER (forest green) ═════════ */
+  .letter {
+    background: var(--forest-deep);
+    color: #fff;
+    padding: 90px 56px 80px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .letter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(700px 500px at 10% 100%, rgba(45,110,76,0.45), transparent 60%),
+      radial-gradient(500px 300px at 95% 5%, rgba(11,13,10,0.35), transparent 60%);
+    pointer-events: none;
+  }
+  .letter-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr;
+    gap: 56px;
+    align-items: start;
+    max-width: 100%;
+  }
+  .letter-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 18px;
+  }
+  .letter-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #fff;
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 30;
+    margin-bottom: 20px;
+  }
+  .letter-title em {
+    font-style: italic;
+    color: #a8d3b8;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 80;
+  }
+  .letter-lede {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.82);
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 30;
+    font-style: italic;
+    max-width: 28ch;
+  }
+  .letter-body {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .promise {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 18px;
+    align-items: start;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .promise:last-child { border-bottom: none; padding-bottom: 0; }
+  .promise-num {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    line-height: 1;
+    color: #a8d3b8;
+    font-variation-settings: "opsz" 144, "wght" 500;
+    font-style: italic;
+  }
+  .promise-title {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    line-height: 1.2;
+    color: #fff;
+    font-variation-settings: "opsz" 144, "wght" 600, "SOFT" 20;
+    margin-bottom: 7px;
+  }
+  .promise-text {
+    font-size: 14.5px;
+    line-height: 1.62;
+    color: rgba(255,255,255,0.82);
+    max-width: 62ch;
+  }
+  .letter-signoff {
+    margin-top: 36px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.78);
+  }
+  .letter-signoff strong {
+    color: #fff;
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 4px;
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 40;
+  }
+
+  /* ═════════ FOOTER ═════════ */
+  .colophon {
+    background: var(--black);
+    padding: 22px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .colophon-l {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.8;
+  }
+  .colophon-r {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--forest-soft);
+    font-variation-settings: "opsz" 144, "wght" 500, "SOFT" 80;
+  }
+
+  /* ═════════ RESPONSIVE ═════════ */
+  @media print {
+    .paper { box-shadow: none; max-width: 100%; }
+    @page { margin: 0; size: letter; }
+  }
+
+  @media (max-width: 820px) {
+    .masthead { padding: 16px 22px 14px; }
+    .hero { padding: 54px 22px 72px; }
+    .hero::after { right: 22px; }
+    .hero-title { font-size: clamp(36px, 9vw, 56px); }
+    .hero-deck { font-size: 15px; }
+    .lede { grid-template-columns: 1fr; gap: 34px; padding: 48px 22px 30px; }
+    .lede-aside-text { font-size: 17px; }
+    .dropcap { font-size: 17px; }
+    .dropcap::first-letter { font-size: 72px; }
+    .statwall { padding: 44px 22px 42px; }
+    .stats { grid-template-columns: 1fr; gap: 34px; }
+    .stat-num { font-size: 72px; }
+    .chapter { padding: 56px 22px 10px; grid-template-columns: 1fr; gap: 18px; }
+    .chapter-num { position: static; font-size: 96px; }
+    .chapter-head { font-size: 30px; }
+    .sidebar { margin: 34px 22px 8px; grid-template-columns: 1fr; gap: 16px; padding: 20px 22px 22px; }
+    .sidebar-kicker { font-size: 18px; }
+    .bleedquote { padding: 60px 22px 64px; margin-top: 44px; }
+    .bleedquote-text { font-size: 24px; }
+    .timeline-wrap { padding: 56px 22px 14px; }
+    .timeline-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .timeline-header h2 { font-size: 26px; }
+    .tl { grid-template-columns: 70px 16px 1fr; column-gap: 12px; }
+    .tl .date { font-size: 12px; padding-top: 14px; }
+    .tl .event { font-size: 13.5px; padding-top: 12px; padding-bottom: 14px; }
+    .forces { padding: 56px 22px 14px; }
+    .forces-head h2 { font-size: 30px; }
+    .forces-grid { grid-template-columns: 1fr; }
+    .force { padding: 28px 24px 26px; }
+    .force-num { font-size: 80px; top: 8px; right: 14px; }
+    .force-title { font-size: 22px; }
+    .letter { padding: 60px 22px 52px; margin-top: 54px; }
+    .letter-inner { grid-template-columns: 1fr; gap: 28px; }
+    .letter-title { font-size: 32px; }
+    .promise { grid-template-columns: 36px 1fr; gap: 14px; }
+    .promise-num { font-size: 26px; }
+    .promise-title { font-size: 18px; }
+    .colophon { flex-direction: column; align-items: flex-start; padding: 18px 22px; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="paper">
+
+  <!-- ═══════════ MASTHEAD ═══════════ -->
+  <div class="masthead">
+    <div class="masthead-logo">
+      <img alt="Leahy-Wolf Company" src="data:image/webp;base64,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" />
+    </div>
+    <div class="masthead-meta">
+      <strong>The Market Briefing</strong><br />
+      Issue 04 · April 2026
+    </div>
+  </div>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero">
+    <span class="hero-kicker">Supply &amp; Pricing · Special Report</span>
+    <h1 class="hero-title">Oil is dropping. Your <em>lubricants</em> didn&rsquo;t get the memo.</h1>
+    <p class="hero-deck">Two markets, one confusing story. Here is why the news ticker and your last invoice keep saying opposite things, and what it will take to get them speaking the same language again.</p>
+    <div class="hero-byline">From the desk of <span>Leahy-Wolf Company</span> · Published Apr 20, 2026</div>
+  </section>
+
+  <!-- ═══════════ LEDE ═══════════ -->
+  <div class="lede">
+    <p class="dropcap">Here is the thing about oil prices. When you see a number flashing on a news crawl, you are not looking at the price of the finished product that goes into your equipment. You are looking at a financial contract: crude oil futures, bought and sold by traders who are responding in real time to whatever headline crossed the wire that morning. The lubricants we deliver to your shop are made from something completely separate. A refined product called <strong>base oil</strong>. It comes out of specific plants in specific places, ships through specific lanes, and is priced on entirely different logic. That second world, the physical one, is what has been broken by the events of the past eight weeks. No news cycle is going to put it back together on a Monday.</p>
+    <aside class="lede-aside">
+      <div class="lede-aside-label">Bottom line</div>
+      <div class="lede-aside-text">The financial markets react in seconds. <span class="mark">Refineries, pipelines, and ocean shipping lanes react in quarters.</span> When those two clocks get out of sync, you see what is happening now: crude futures calming down while lubricant invoices keep climbing.</div>
+    </aside>
+  </div>
+
+  <!-- ═══════════ STAT WALL ═══════════ -->
+  <section class="statwall">
+    <div class="statwall-intro">By the numbers / April 2026</div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">35<span style="color:var(--forest)">&ndash;</span>40<span class="unit">%</span></div>
+        <div class="stat-label">U.S. Premium Base Oil / Offline or Stranded</div>
+        <div class="stat-body">The share of the premium base oil the U.S. normally pulls from the Middle East that is now damaged, under force majeure, or stuck behind a closed shipping route.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1 yr<span class="plus">+</span></div>
+        <div class="stat-label">Qatar&rsquo;s Pearl GTL / Minimum Downtime</div>
+        <div class="stat-body">The world&rsquo;s largest premium base oil facility was hit by Iranian missiles on March 18. Repairs cannot start while the shooting continues. The U.S. was its single largest customer.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2027</div>
+        <div class="stat-label">Earliest U.S. Replacement Capacity</div>
+        <div class="stat-body">New domestic base oil capacity already in development will not come online before 2027. There is no near-term stateside fix for what has been taken off the board.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CHAPTER 01 ═══════════ -->
+  <section class="chapter">
+    <div class="chapter-num">01</div>
+    <div>
+      <div class="chapter-eyebrow">What actually happened</div>
+      <h2 class="chapter-head">Eight weeks that rewired the global lubricant supply chain.</h2>
+      <div class="chapter-body">
+        <p>On <strong>February 28, 2026</strong>, the United States and Israel opened an air campaign against Iran. Tehran&rsquo;s response was immediate. They shut the <strong>Strait of Hormuz</strong>, the passage that carries roughly a fifth of the world&rsquo;s seaborne crude, and started firing missiles and drones at Gulf energy infrastructure. The International Energy Agency later called what followed <em class="green">the largest supply disruption in the history of the oil market</em>. That is not a phrase the IEA uses often.</p>
+        <p>The hit that mattered most to lubricants landed on <strong>March 18</strong>. That was the day Iranian missiles struck the Ras Laffan Industrial City in Qatar and knocked out <strong>Pearl GTL</strong>, the single largest source on the planet of the premium base oil that goes into full synthetic and synthetic blend motor oils. Blending plants in the <strong>UAE</strong> and <strong>Bahrain</strong> declared force majeure within the week. <strong>QatarEnergy</strong> halted exports entirely. Do the math and roughly <strong>40%</strong> of the premium base oil the U.S. normally imports went dark in a matter of days.</p>
+        <p>A ceasefire on <strong>April 8</strong> lasted about four days before Iran&rsquo;s nuclear commitments broke it. On <strong>April 13</strong>, the U.S. Navy began a blockade of Iranian ports. Tanker traffic through Hormuz has effectively stopped. Just <strong>two vessels</strong> moved through on April 16. A normal day used to be more than a hundred. Tehran has since threatened to extend the disruption into the wider Persian Gulf, the Gulf of Oman, and the Red Sea.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SIDEBAR EXPLAINER ═══════════ -->
+  <aside class="sidebar">
+    <div class="sidebar-kicker">Wait, base oil is different from crude oil?</div>
+    <div class="sidebar-body">
+      <p>Yes, and it matters more than the news is letting on. Lubricants are blended from <strong>base oil</strong>, a refined petroleum product that the American Petroleum Institute sorts into five groups (I through V) by processing method and sulfur content. Full synthetic motor oil leans on <strong>Group III</strong>, which only comes out of specialized gas-to-liquids plants or deep hydrocracking units. You can count the plants in the world that make this stuff on two hands. When one of them goes down, there is no off-the-shelf replacement. Base oil moves through long-term contracts priced on refinery economics and regional supply, not on whatever crude did yesterday.</p>
+    </div>
+  </aside>
+
+  <!-- ═══════════ FULL-BLEED QUOTE ═══════════ -->
+  <section class="bleedquote">
+    <div class="bleedquote-inner">
+      <span class="bleedquote-mark">&ldquo;</span>
+      <div class="bleedquote-text">A ceasefire announcement does not <span class="hi">clear a shipping channel</span>, repair a blown-up plant, or teleport tankers back from halfway around the world.</div>
+      <div class="bleedquote-cite">// The lag between financial markets and physical supply</div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CHAPTER 02 / TIMELINE ═══════════ -->
+  <section class="timeline-wrap">
+    <div class="timeline-header">
+      <h2>Eight weeks on a single page.</h2>
+      <div class="timeline-legend">
+        <span><span class="dot c"></span>Conflict / market</span>
+        <span><span class="dot i"></span>Industry response</span>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="date">Feb 28</div><div class="marker"></div><div class="event"><strong>War begins.</strong> Crude futures spike. Iran shuts the Strait of Hormuz, which carries roughly 20% of the world&rsquo;s seaborne oil.</div>
+      <div class="date">Mar 8</div><div class="marker"></div><div class="event">Hormuz closure confirmed. Major shipping lines suspend transits through the strait.</div>
+      <div class="date">Mar 10</div><div class="marker"></div><div class="event">The IEA releases <strong>400 million barrels</strong> from strategic reserves. Gulf production falls by roughly <strong>6.7 million barrels a day</strong>.</div>
+      <div class="date">Mar 13</div><div class="marker industry"></div><div class="event industry">The <strong>Independent Lubricant Manufacturers Association (ILMA)</strong>, which represents U.S. blenders, files emergency requests with federal regulators and flags a critical base oil supply threat to U.S. industry.</div>
+      <div class="date">Mar 16</div><div class="marker industry"></div><div class="event industry">ILMA requests emergency flexibility on motor oil certification standards, signaling that synthetic formulations may need to change temporarily.</div>
+      <div class="date">Mar 18</div><div class="marker"></div><div class="event"><strong>Pearl GTL is struck</strong> in Qatar. UAE and Bahrain declare force majeure on supply contracts. QatarEnergy halts all exports.</div>
+      <div class="date">Mar 25</div><div class="marker industry"></div><div class="event industry">The <strong>American Petroleum Institute (API)</strong> grants ILMA&rsquo;s emergency licensing relief, formally recognizing force majeure across the base oil supply chain.</div>
+      <div class="date">Mar 31</div><div class="marker"></div><div class="event">U.S. gasoline tops <strong>$4 a gallon</strong>. Brent crude peaks near <strong>$120 a barrel</strong> before pulling back on diplomatic signals.</div>
+      <div class="date">Apr 3</div><div class="marker industry"></div><div class="event industry"><strong>General Motors</strong> approves ILMA&rsquo;s request for temporary flexibility in its synthetic oil certification program.</div>
+      <div class="date">Apr 8</div><div class="marker industry"></div><div class="event industry">ILMA briefs the <strong>U.S. Department of Energy</strong>. Their conclusion: expect pressure on the lubricant market through at least <strong>2027</strong>. A ceasefire is announced, but passage through the strait remains conditional and restricted.</div>
+      <div class="date">Apr 13</div><div class="marker"></div><div class="event"><strong>Peace talks collapse.</strong> The U.S. Navy begins a military blockade of Iran&rsquo;s ports.</div>
+      <div class="date">Apr 18</div><div class="marker"></div><div class="event">Day four of the blockade. Iran&rsquo;s <strong>IRGC</strong> closes the Strait of Hormuz again, a day after the Iranian foreign minister said it was reopened. Two Indian-flagged ships report being fired upon.</div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CHAPTER 03 / FORCES ═══════════ -->
+  <section class="forces">
+    <div class="forces-head">
+      <div class="eyebrow">Chapter 03 / Four reasons at once</div>
+      <h2>Your lube invoice isn&rsquo;t moving on one bad headline. <em>It&rsquo;s moving on four.</em></h2>
+    </div>
+
+    <div class="forces-grid">
+      <div class="force">
+        <div class="force-num">01</div>
+        <div class="force-label">Physical damage</div>
+        <h3 class="force-title">The plants are broken.</h3>
+        <p class="force-body">Three facilities that together produce roughly <strong>27% of global</strong> and <strong>40% of U.S.</strong> premium base oil are offline, in force majeure, or running far below capacity. These are buildings that take years and billions to construct. Repairs cannot start while bombs are still falling. Industry experts now call a year of downtime the optimistic scenario.</p>
+      </div>
+      <div class="force">
+        <div class="force-num">02</div>
+        <div class="force-label">Logistics</div>
+        <h3 class="force-title">The shipping lane is closed.</h3>
+        <p class="force-body">Even the product that wasn&rsquo;t damaged cannot reach U.S. ports while Hormuz is under blockade. Tankers have been diverted the long way around the world. Marine insurance has been completely repriced. Port backlogs are heavy. And here is the part people miss: after a route like this reopens, it still takes weeks to months for traffic to normalize. The route isn&rsquo;t open yet.</p>
+      </div>
+      <div class="force">
+        <div class="force-num">03</div>
+        <div class="force-label">Refinery economics</div>
+        <h3 class="force-title">Diesel pays more than lube.</h3>
+        <p class="force-body">When diesel prices spike, refineries that are still running shift their processing mix toward diesel because that is where the margin sits. Even plants that were never touched by a missile are producing less base oil right now. It is not sentiment. It is economics.</p>
+      </div>
+      <div class="force">
+        <div class="force-num">04</div>
+        <div class="force-label">Ripple effect</div>
+        <h3 class="force-title">Korea depends on the Gulf, too.</h3>
+        <p class="force-body">Roughly <strong>30%</strong> of U.S. premium base oil comes from <strong>South Korea</strong>, a country with no role in this conflict. But Korean refineries run on Persian Gulf crude. As that crude gets scarce or rerouted, Korean base oil output drops too. Distributor costs move on that alone, entirely independent of whatever the financial news says this hour.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CHAPTER 04 / WHY CEASEFIRES DON'T FIX IT ═══════════ -->
+  <section class="chapter" style="padding-top:72px;">
+    <div class="chapter-num">04</div>
+    <div>
+      <div class="chapter-eyebrow">Why prices don&rsquo;t snap back</div>
+      <h2 class="chapter-head">Financial markets reprice in seconds. Physical ones take years.</h2>
+      <div class="chapter-body">
+        <p>You already saw how this plays out. Crude futures dropped the moment the <strong>April 8</strong> ceasefire hit the wire. Within four days, the talks were dead, the Navy was enforcing a blockade, and the strait was closed again.</p>
+        <p>History tells the same story. When Kuwait&rsquo;s oil infrastructure was destroyed in <strong>1990</strong>, markets assumed a fast recovery. Actual restoration took years. The physical work of rebuilding a plant, clearing a mined waterway, and getting ships back on a route does not move at the speed of a press conference.</p>
+        <p>After briefing the U.S. Department of Energy directly, ILMA concluded the U.S. lubricant market will stay under sustained pressure through at least <strong>2027</strong>, with no domestic production capable of closing the gap before then.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ LETTER / COMMITMENT ═══════════ -->
+  <section class="letter">
+    <div class="letter-inner">
+      <div>
+        <div class="letter-kicker">A note from Leahy-Wolf</div>
+        <h2 class="letter-title">How we&rsquo;re <em>working through this</em> with you.</h2>
+        <p class="letter-lede">We&rsquo;re not going to pretend any of this is fun. Costs are up. Availability is tight. Conditions like these are bigger than any single distributor. Here is how we are working through it on your behalf.</p>
+      </div>
+      <div class="letter-body">
+        <div class="promise">
+          <div class="promise-num">i.</div>
+          <div>
+            <div class="promise-title">We carry more than one brand.</div>
+            <div class="promise-text">Most distributors lean on a single primary supplier and scramble when that supplier runs short. We carry multiple brands across every product line we sell, and that redundancy is the reason some of your orders are still shipping on time this month. It is not a sales pitch. It is the infrastructure that matters right now.</div>
+          </div>
+        </div>
+        <div class="promise">
+          <div class="promise-num">ii.</div>
+          <div>
+            <div class="promise-title">Every increase is documented.</div>
+            <div class="promise-text">Our suppliers have been issuing cost increases in writing, sometimes twice in a single month. We pass those through as they arrive. We don&rsquo;t speculate on future prices, and we don&rsquo;t stack margin on top of chaos. If you want to see the supplier letters, ask us. They&rsquo;re on file.</div>
+          </div>
+        </div>
+        <div class="promise">
+          <div class="promise-num">iii.</div>
+          <div>
+            <div class="promise-title">We&rsquo;ve been doing this a long time.</div>
+            <div class="promise-text">This isn&rsquo;t the first oil shock Leahy-Wolf has worked through, and it won&rsquo;t be the last. Wars, recessions, embargoes, the 70s, 2008, 2020: every one of them was a test of whether a distributor was actually a partner or just a line on an invoice. What we can promise is that when the market gets this hard, our job is to be the partner you can still count on.</div>
+          </div>
+        </div>
+        <div class="letter-signoff">
+          Questions on your account, pricing, substitutes, or where your next order stands? Call your Leahy-Wolf sales representative. They have the answers and the documentation. <strong>Thank you for your business.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="colophon">
+    <div class="colophon-l">
+      Leahy-Wolf Company · leahywolf.com<br />
+      © 2026 Leahy-Wolf Company. All rights reserved. Data current as of Apr 18, 2026.
+    </div>
+    <div class="colophon-r">Still your partner when the market isn&rsquo;t.</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
